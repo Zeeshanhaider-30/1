@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-harbor-paper text-harbor-ink;
+    }
+}
+
+@layer components {
+    .harbor-card {
+        @apply rounded-3xl border border-harbor-sand/70 bg-white/95 shadow-[0_24px_55px_-28px_rgba(15,23,42,0.6)] backdrop-blur-sm;
+    }
+
+    .harbor-input {
+        @apply w-full rounded-2xl border border-harbor-sand/75 bg-white px-4 py-3 text-sm text-harbor-ink shadow-sm placeholder:text-harbor-muted/70 focus:border-harbor-pine focus:ring-2 focus:ring-harbor-pine/20;
+    }
+
+    .harbor-label {
+        @apply mb-2 block text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-harbor-muted;
+    }
+
+    .harbor-btn-primary {
+        @apply inline-flex items-center justify-center rounded-2xl bg-harbor-pine px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_38px_-18px_rgba(37,99,235,0.8)] transition hover:-translate-y-0.5 hover:bg-harbor-night focus:outline-none focus:ring-2 focus:ring-harbor-pine/35 focus:ring-offset-2 focus:ring-offset-harbor-paper;
+    }
+
+    .harbor-btn-ghost {
+        @apply inline-flex items-center justify-center rounded-2xl border border-harbor-pine/20 bg-white/75 px-5 py-3 text-sm font-semibold text-harbor-pine transition hover:bg-harbor-sand/45;
+    }
+
+    .harbor-badge {
+        @apply inline-flex items-center rounded-full border border-harbor-sand/80 bg-white px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-harbor-muted;
+    }
+
+    .harbor-section-title {
+        @apply font-display text-3xl font-bold leading-tight text-harbor-night sm:text-4xl;
+    }
+}
