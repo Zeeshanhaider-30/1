@@ -12,7 +12,7 @@ class Product extends Model
         'slug',
         'description',
         'price',
-        'image_url',
+        'image',   // ✅ keep this (this is stored in DB)
         'stock',
         'is_active',
     ];
@@ -25,5 +25,13 @@ class Product extends Model
     public function getRouteKeyName(): string
     {
         return 'slug';
+    }
+
+    // ✅ ADD THIS ACCESSOR HERE
+    public function getImageUrlAttribute()
+    {
+        return $this->image
+            ? asset($this->image)
+            : null;
     }
 }
